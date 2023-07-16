@@ -1,5 +1,7 @@
 import React from "react";
 import "./PhotoComponent.css";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
 const PhotoComponent = ({ photo }) => {
   const { user, urls } = photo;

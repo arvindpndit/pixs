@@ -4,16 +4,40 @@
   box-sizing: border-box;
 }
 
-.columnUl {
-  width: 100%;
-  list-style: none;
-  padding: 8px;
-  margin: 0;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* Styles for the feed component */
+.feed {
   display: flex;
+  justify-content: center;
+}
+
+.columnUl {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .li {
-  margin-bottom: 12px;
+  flex-basis: 33.33%; /* Adjust this value to control the number of columns */
+  padding: 5px;
+}
+
+/* Styles for the photo component */
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .li {
+    flex-basis: 50%; /* Adjust this value for two columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .li {
+    flex-basis: 100%; /* Display one column on the smallest screens */
+  }
 }

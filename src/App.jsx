@@ -11,7 +11,7 @@ const api = createApi({
 
 function App() {
   const [photos, setPhotosResponse] = useState(null);
-  const [searchResult, setSearchResult] = useState("");
+  const [searchResult, setSearchResult] = useState("cat");
   console.log(searchResult);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
       <Navbar />
       <SearchBar setSearchResult={setSearchResult} />
       <div className="feed">
-        <ul className=" ">
+        <ul className="columnUl">
           {photos &&
             photos.response.results.map((photo) => (
               <li key={photo.id} className="li">
