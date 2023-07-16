@@ -1,18 +1,38 @@
 import TextField from "@mui/material/TextField";
+import { Button } from "@mui/material";
 import "./SearchBar.css";
 import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ setSearchResult }) => {
   const [searchInput, setSearchInput] = useState("");
-  console.log(searchInput);
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      setSearchResult(searchInput);
+    }
+  };
+
   return (
-    <div className="main">
-      <TextField
-        id="outlined-basic"
-        label="Search Here"
+    <div className="search-container">
+      <div className="main">
+        <TextField
+          id="outlined-basic"
+          label="Search Here"
+          variant="outlined"
+          onChange={(event) => setSearchInput(event.target.value)}
+        />
+      </div>
+      <Button
         variant="outlined"
-        onChange={(event) => setSearchInput(event.target.value)}
-      />
+        size="large"
+        sx={{ height: "55px" }}
+        onClick={() => {
+          setSearchResult(searchInput);
+        }}
+      >
+        Search
+      </Button>
     </div>
   );
 };
