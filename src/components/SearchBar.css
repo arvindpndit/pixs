@@ -1,0 +1,11 @@
+.main {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#outlined-basic {
+  min-width: 45vw;
+}
