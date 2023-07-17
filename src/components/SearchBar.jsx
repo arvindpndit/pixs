@@ -21,6 +21,7 @@ const SearchBar = ({ setSearchResult }) => {
           label="Search Here"
           variant="outlined"
           onChange={(event) => setSearchInput(event.target.value)}
+          onKeyPress={handleKeyPress}
         />
       </div>
       <Button
