@@ -10,8 +10,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border-radius: 30px;
 }
 
 #outlined-basic {
   min-width: 45vw;
+  border-radius: 30px;
 }

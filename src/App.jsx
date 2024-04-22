@@ -11,7 +11,7 @@ const api = createApi({
 
 function App() {
   const [photos, setPhotosResponse] = useState(null);
-  const [searchResult, setSearchResult] = useState("cat");
+  const [searchResult, setSearchResult] = useState("mountain");
   console.log(searchResult);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
   }, [searchResult]);
 
   return (
-    <>
+    <div id="main">
       <Navbar />
       <SearchBar setSearchResult={setSearchResult} />
       <div className="feed">
@@ -43,7 +43,7 @@ function App() {
             ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 
